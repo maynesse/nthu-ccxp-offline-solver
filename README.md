@@ -4,6 +4,15 @@ An unofficial Firefox extension that recognizes six-digit CAPTCHAs on the
 National Tsing Hua University CCXP login page locally in the browser.
 Not affiliated with or endorsed by NTHU.
 
+## Download
+
+[**Download for Firefox (.xpi)**](https://github.com/maynesse/nthu-ccxp-offline-solver/releases/latest/download/nthu-ccxp-offline-solver.xpi)
+
+Download the .xpi. In Firefox, open about:addons, click the gear menu,
+choose Install Add-on From File…, and select the downloaded file.
+Then open the extension’s setup page and import the recognition model.
+
+
 ## Features
 
 - Local JavaScript inference; no third-party recognition service or telemetry.
