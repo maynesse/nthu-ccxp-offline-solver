@@ -1,0 +1,2 @@
+Original NTHU CCXP Decaptcha project/model: copyright (c) 2022 25349023, MIT license. https://github.com/25349023/nthu-ccxp-captcha
+This Firefox derivative is unofficial and not affiliated with NTHU.

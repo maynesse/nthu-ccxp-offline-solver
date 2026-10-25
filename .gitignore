@@ -1,0 +1,14 @@
+# Local and generated artifacts
+/dist/
+/tests/synthetic.pt
+/tests/synthetic.json
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+node_modules/
+.venv/
+*.log
+.env
+.env.*

@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "web-ext": "10.8.0"
+  },
+  "name": "nthu-ccxp-offline-solver",
+  "version": "1.0.2",
+  "private": true,
+  "description": "Development tooling for the local-only Firefox CAPTCHA add-on",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "python3 scripts/check_project.py && node tests/smoke.js",
+    "lint": "web-ext lint --source-dir extension --warnings-as-errors",
+    "build": "python3 scripts/build_release.py"
+  }
+}
