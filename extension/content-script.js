@@ -7,12 +7,9 @@
   let lastImage = null;
 
   try {
-    const stored = await browser.storage.local.get('modelB64');
-    if (!stored.modelB64) {
-      console.info('[CCXP Local] Import tiny_net.pt in the add-on options to activate local recognition.');
-      return;
-    }
-    model = localModel.modelFromBytes(localModel.base64ToBytes(stored.modelB64));
+    const result = await browser.runtime.sendMessage({type: 'get-bundled-model'});
+    if (!result?.modelB64) throw new Error(result?.error || 'Bundled model unavailable.');
+    model = localModel.modelFromBytes(localModel.base64ToBytes(result.modelB64));
   } catch (error) {
     console.warn('[CCXP Local] Unable to load the local model:', error);
     return;

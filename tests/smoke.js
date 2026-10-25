@@ -7,7 +7,7 @@ const M = require('../extension/model.js');
 const m = JSON.parse(fs.readFileSync(path.join(__dirname,'../extension/manifest.json'),'utf8'));
 assert.equal(m.manifest_version, 2);
 assert.equal(m.browser_specific_settings.gecko.data_collection_permissions.required[0], 'none');
-assert.deepEqual(m.permissions,['storage']);
+assert.deepEqual(m.permissions,[]);
 assert.throws(() => M.modelFromBytes(new Uint8Array(90)), /ZIP-based|ZIP/);
 const weights = {
   conv1W:new Float32Array(16*3*3*3),conv1B:new Float32Array(16),
