@@ -10,7 +10,8 @@ Not affiliated with or endorsed by NTHU.
 
 Download the .xpi. In Firefox, open about:addons, click the gear menu,
 choose Install Add-on From File…, and select the downloaded file.
-Then open the extension’s setup page and import the recognition model.
+Version 1.0.3 includes the model: open or refresh the NTHU CCXP login page.
+Older releases (1.0.2 and earlier) still require a one-time model import.
 
 
 ## Features
@@ -18,17 +19,22 @@ Then open the extension’s setup page and import the recognition model.
 - Local JavaScript inference; no third-party recognition service or telemetry.
 - Fills the CAPTCHA field without submitting the login form or replacing existing text.
 - Runs only on `https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/*`.
-- Stores the recognition model locally using Firefox's `storage` permission.
+- Includes the verified recognition model; no setup, storage permission, or external model download.
 - Includes no remotely loaded JavaScript or runtime dependencies.
 
 ## Model
 
-The original `tiny_net.pt` model is imported once through the extension's setup
-page. Model weights are not bundled. Imported bytes are checked against Git blob
-SHA-1 `d5825b06613202943d481dd6cbe69c939ffddaf4` and parsed without executing pickle
-instructions. Recognition runs locally after import.
+The original `tiny_net.pt` is bundled under `extension/models/` and verified
+against Git blob SHA-1 `d5825b06613202943d481dd6cbe69c939ffddaf4` before use.
+The background script reads only this fixed internal extension resource and
+passes the verified bytes to the content script. It has no remote fallback.
+The checkpoint is parsed without executing pickle instructions.
 
-Model source: [25349023/nthu-ccxp-captcha](https://github.com/25349023/nthu-ccxp-captcha/blob/master/decaptcha/tiny_net.pt).
+Existing installations no longer depend on a manually imported model. Any
+legacy stored copy is unused. The original project may be unavailable without
+affecting model loading in 1.0.3.
+
+See [model provenance](extension/models/README.md) and [license](LICENSE).
 
 ## Development
 

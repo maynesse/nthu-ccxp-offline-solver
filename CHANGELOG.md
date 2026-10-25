@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.3 — 2026-10-26
+
+- Bundle the verified upstream model with MIT attribution.
+- Load the model internally with an integrity check; no download or import.
+- Remove the storage permission and replace setup with model status.
+- Add bundled-model loading and failure-path tests.
+
+
 ## 1.0.2 — 2026-10-26
 
 - Assign a permanent UUID add-on ID before first publication.
