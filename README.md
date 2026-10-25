@@ -6,7 +6,7 @@ Not affiliated with or endorsed by NTHU.
 
 ## Download
 
-[**Download for Firefox (.xpi)**](https://github.com/maynesse/nthu-ccxp-offline-solver/releases/latest/download/nthu-ccxp-offline-solver.xpi)
+[**Download for Firefox (.xpi)**](https://github.com/maynesse/nthu-ccxp-offline-solver/releases/latest/download/nthu-ccxp-offline-solver-1.0.3.xpi)
 
 Download the .xpi. In Firefox, open about:addons, click the gear menu,
 choose Install Add-on From File…, and select the downloaded file.
